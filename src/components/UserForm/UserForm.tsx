@@ -98,13 +98,14 @@ const UserForm: React.FC<Props> = ({ onSubmit }) => {
 
 					<select
 						className='form-select'
-						defaultValue={''}
 						name={'role'}
 						value={user.role}
 						onChange={changeUser}
 						required
 					>
-						<option value={''}>Select a role for the user</option>
+						<option defaultValue={''} value={''}>
+							Select a role for the user
+						</option>
 						<option value='user'>User</option>
 						<option value='editor'>Editor</option>
 						<option value='admin'>Administrator</option>
