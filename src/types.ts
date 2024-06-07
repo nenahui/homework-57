@@ -5,3 +5,10 @@ export interface User {
   role: string;
   isActive: boolean;
 }
+
+export interface UserMutation {
+  name: string;
+  email: string;
+  role: string;
+  isActive: boolean;
+}

@@ -11,13 +11,17 @@ const App = () => {
     {id: nanoid(), name: 'Tris', email: 'tris@gmail.com', role: 'user', isActive: true},
   ]);
 
+  const addItem = (user: User) => {
+    setUsers((prevState) => [...prevState, user]);
+  };
+
   return (
-    <div className={'container-fluid my-5'}>
-      <div className="row justify-content-center">
-        <div className="col-4">
-          <UserForm/>
+    <div className={'container my-5'}>
+      <div className="row row-cols-1 row-cols-md-2 justify-content-center">
+        <div className="col-12 col-md-6 col-lg-4 mb-4">
+          <UserForm onSubmit={addItem} />
         </div>
-        <div className="col-6">
+        <div className="col-12 col-md-6 col-lg-6 mb-4">
           <Users users={users}/>
         </div>
       </div>
