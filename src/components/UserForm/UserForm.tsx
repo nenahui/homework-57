@@ -19,7 +19,6 @@ const UserForm: React.FC<Props> = ({ onSubmit }) => {
 	const changeUser = (
 		event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>,
 	) => {
-		console.log(event.target.name, event.target.value);
 		setUser((prevState) => ({
 			...prevState,
 			[event.target.name]: event.target.value,
